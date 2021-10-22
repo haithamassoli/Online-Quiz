@@ -11,7 +11,9 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const que_text = document.querySelector(".que_text");
+const inputBtn = document.querySelectorAll(".inputDel");
 
+let grade = 0;
 let counter = 0;
 function next() {
   fetch(
@@ -19,17 +21,18 @@ function next() {
   )
     .then((data) => data.json())
     .then((data) => {
-      // console.log(data[counter].options[counter]);
+      // console.log(data[counter].question);
       title.innerHTML = data[counter].title;
       que_text.innerHTML = data[counter].question;
 
       for (i = 0; i < 4; i++) {
-        const input = document.createElement("input");
-        const label = document.createElement("label");
+        input = document.createElement("input");
+        label = document.createElement("label");
         input.setAttribute("type", "radio");
         input.setAttribute("class", "inputDel");
         input.setAttribute("id", `number${[i]}`);
-        input.setAttribute("name", `Web Developer Shortcuts`);
+        input.setAttribute("name", `${data[counter].question}`);
+        input.setAttribute("value", `${data[counter].options[i]}`);
         label.setAttribute("class", "option");
         label.setAttribute("for", `number${[i]}`);
         option_list.appendChild(input);
@@ -53,7 +56,7 @@ function timer_sec(sec) {
     if (timeCount.innerHTML <= 9) timeCount.innerHTML = `0${sec}`;
     if (timeCount.innerHTML == 0) {
       clearInterval(timer_left);
-      timeCount.innerHTML = "time out";
+      timeText.innerHTML = "Time Off";
     }
     sec--;
   }, 1000);
@@ -70,6 +73,8 @@ next_btn.addEventListener("click", () => {
   if (counter < 4) {
     const labelText = document.querySelectorAll(".option");
     que_text.innerHTML = "";
+    // function getGrade();
+    trueFalse();
     labelText.forEach((e) => e.remove());
     clearInterval(line_left);
     clearInterval(timer_left);
@@ -79,3 +84,7 @@ next_btn.addEventListener("click", () => {
   timer_sec(15);
   timer_line(0);
 });
+
+function trueFalse() {
+  inputBtn.forEach((e) => console.log("e.target"));
+}
