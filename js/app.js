@@ -14,7 +14,9 @@ const que_text = document.querySelector(".que_text");
 
 let counter = 0;
 function next() {
-  fetch("../questions.json")
+  fetch(
+    "https://raw.githubusercontent.com/haithamassoli/Online-Quiz/main/questions.json"
+  )
     .then((data) => data.json())
     .then((data) => {
       // console.log(data[counter].options[counter]);
@@ -69,6 +71,8 @@ next_btn.addEventListener("click", () => {
     const labelText = document.querySelectorAll(".option");
     que_text.innerHTML = "";
     labelText.forEach((e) => e.remove());
+    clearInterval(line_left);
+    clearInterval(timer_left);
     counter++;
     next();
   } else console.log("helllo");
