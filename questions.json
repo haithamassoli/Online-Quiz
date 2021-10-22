@@ -1,6 +1,6 @@
 [
   {
-    "title": "HTML",
+    "title": "Web Developer Shortcuts",
     "numb": 1,
     "question": "What does HTML stand for?",
     "answer": "Hyper Text Markup Language",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "title": "HTML",
+    "title": "Web Developer Shortcuts",
     "numb": 2,
     "question": "What does CSS stand for?",
     "answer": "Cascading Style Sheet",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "title": "HTML",
+    "title": "Web Developer Shortcuts",
     "numb": 3,
     "question": "What does PHP stand for?",
     "answer": "Hypertext Preprocessor",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "title": "HTML",
+    "title": "Web Developer Shortcuts",
     "numb": 4,
     "question": "What does SQL stand for?",
     "answer": "Structured Query Language",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "title": "HTML",
+    "title": "Web Developer Shortcuts",
     "numb": 5,
     "question": "What does XML stand for?",
     "answer": "eXtensible Markup Language",

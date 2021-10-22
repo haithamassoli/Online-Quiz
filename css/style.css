@@ -144,7 +144,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 145px;
+  min-width: 145px;
 }
 
 .quiz_box header .timer .time_left_txt {
@@ -157,7 +157,9 @@ body {
   font-size: 18px;
   font-weight: 500;
   height: 30px;
-  width: 45px;
+  min-width: 45px;
+  margin-left: 5px;
+  padding: 0 5px;
   color: #fff;
   border-radius: 5px;
   line-height: 30px;
@@ -173,6 +175,7 @@ body {
   left: 0px;
   height: 3px;
   background: #007bff;
+  transition: all 1s;
 }
 
 section {
@@ -214,7 +217,7 @@ section .option_list .option:hover {
   border: 1px solid #b8daff;
 }
 
-section .option_list .option.correct {
+/* section .option_list .option.correct {
   color: #155724;
   background: #d4edda;
   border: 1px solid #c3e6cb;
@@ -224,13 +227,13 @@ section .option_list .option.incorrect {
   color: #721c24;
   background: #f8d7da;
   border: 1px solid #f5c6cb;
-}
+} */
 
 section .option_list .option.disabled {
   pointer-events: none;
 }
 
-section .option_list .option .icon {
+/* section .option_list .option .icon {
   height: 26px;
   width: 26px;
   border: 2px solid transparent;
@@ -240,8 +243,8 @@ section .option_list .option .icon {
   pointer-events: none;
   transition: all 0.3s ease;
   line-height: 24px;
-}
-.option_list .option .icon.tick {
+} */
+/* .option_list .option .icon.tick {
   color: #23903c;
   border-color: #23903c;
   background: #d4edda;
@@ -251,7 +254,7 @@ section .option_list .option .icon {
   color: #a42834;
   background: #f8d7da;
   border-color: #a42834;
-}
+} */
 
 footer {
   height: 60px;
@@ -379,4 +382,12 @@ footer button.show {
 .buttons button.quit:hover {
   color: #fff;
   background: #007bff;
+}
+
+.inputDel {
+  visibility: hidden;
+}
+
+.inputDel:checked + label {
+  background-color: #cce5ff;
 }
