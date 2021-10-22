@@ -14,13 +14,9 @@ const que_text = document.querySelector(".que_text");
 
 let counter = 0;
 function next() {
-<<<<<<< HEAD
   fetch(
     "https://raw.githubusercontent.com/haithamassoli/Online-Quiz/main/questions.json"
   )
-=======
-  fetch("https://raw.githubusercontent.com/haithamassoli/Online-Quiz/main/questions.json")
->>>>>>> 189e63a61d82afc4275d8dd5d8ff069d1345491a
     .then((data) => data.json())
     .then((data) => {
       // console.log(data[counter].options[counter]);
