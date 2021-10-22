@@ -12,6 +12,7 @@ const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const que_text = document.querySelector(".que_text");
 const inputBtn = document.querySelectorAll(".inputDel");
+const total_que = document.querySelector(".total_que");
 
 let grade = 0;
 let counter = 0;
@@ -21,10 +22,10 @@ function next() {
   )
     .then((data) => data.json())
     .then((data) => {
-      // console.log(data[counter].question);
+      // console.log(data[counter]);
       title.innerHTML = data[counter].title;
       que_text.innerHTML = data[counter].question;
-
+      total_que.innerHTML = `${data[counter].numb} of ${data.length} Question`;
       for (i = 0; i < 4; i++) {
         input = document.createElement("input");
         label = document.createElement("label");
@@ -75,6 +76,7 @@ next_btn.addEventListener("click", () => {
     que_text.innerHTML = "";
     // function getGrade();
     trueFalse();
+    option_list.innerHTML = "";
     labelText.forEach((e) => e.remove());
     clearInterval(line_left);
     clearInterval(timer_left);

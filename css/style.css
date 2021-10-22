@@ -199,7 +199,7 @@ section .option_list .option {
   border-radius: 5px;
   padding: 8px 15px;
   font-size: 17px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
