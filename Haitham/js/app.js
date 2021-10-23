@@ -13,9 +13,7 @@ const timeCount = document.querySelector(".timer .timer_sec");
 const que_text = document.querySelector(".que_text");
 const inputBtn = document.querySelector("form");
 const total_que = document.querySelector(".total_que");
-const score_text = document.querySelector(".score_text");
-const result = document.querySelector(".result");
-
+console.log(inputBtn.elements);
 let grade = 0;
 let counter = 0;
 function next() {
@@ -24,7 +22,7 @@ function next() {
   )
     .then((data) => data.json())
     .then((data) => {
-      // console.log(data[counter]);
+      console.log(data[counter]);
       title.innerHTML = data[counter].title;
       que_text.innerHTML = data[counter].question;
       total_que.innerHTML = `${data[counter].numb} of ${data.length} Question`;
@@ -102,9 +100,6 @@ next_btn.addEventListener("click", () => {
     clearInterval(timer_left);
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeResult");
-    // score_text.innerHTML = ``;
-
-    next();
   }
   timer_sec(15);
   timer_line(0);

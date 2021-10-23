@@ -6,9 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-label {
-  display: block;
-}
+
 body {
   background: #007bff;
 }
@@ -36,11 +34,6 @@ body {
   z-index: 5;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
-}
-
-.result_box.activeResult {
-  width: 100%;
-  height: 100vh;
 }
 
 .start_btn button {
