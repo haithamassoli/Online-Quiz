@@ -3,8 +3,6 @@ let Email = document.getElementById('email');
         let btn = document.getElementById('btn');
         let check = document.querySelectorAll('.check');
 
-        let quizLink = document.querySelector(".quiz-link").classList.add("quiz-link-disable");
-
         btn.addEventListener('click', (e) => {
             let currentemail = Email.value;
             console.log(currentemail);

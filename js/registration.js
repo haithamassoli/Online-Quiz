@@ -1,136 +1,109 @@
+let email = document.getElementById("email");
+let nameuser = document.getElementById("name");
+let password = document.getElementById("password");
+let confirmPass = document.getElementById("password-confirm");
 
-let emailInput = document.querySelector(".email-input");
-let nameInput = document.querySelector(".full-name-input");
-let passWord = document.querySelector(".password-input");
-let confirmPass = document.querySelector(".conf-password-input");
+let imageRadio = document.querySelector(".checkbox");
 
+let signUp = document.getElementById("signup");
+let errors = document.querySelectorAll(".error");
 
-let signUp = document.querySelector(".signup-button");
-
-
-let emailError = document.querySelector(".email-error");
-let nameError = document.querySelector(".name-error");
-let passError = document.querySelector(".pass-error");
-let passConfirmationError = document.querySelector(".pass-confirmation-error");
-
-let quizLink = document.querySelector(".quiz-link").classList.add("quiz-link-disable");
-
-let mistake;
-
-let emailRegex =  /^[a-zA-Z0-9._-]+@(hotmail|gmail|yahoo).com$/;
-let passRegex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-let nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-
-function show(message){
-    if(mistake === "emailInput"){
-        emailError.innerText = message;
-    }else if(mistake === "nameInput"){
-        nameError.innerText = message;
-    }else if(mistake === "passWord"){
-        passError.innerText = message;
-    }else if(mistake === "confirmPass"){
-        passConfirmationError.innerText = message;
-    }
+function removeError(err) {
+	err.innerHTML = "";
 }
 
-function checkEmpty(){
-  try{
-      if(emailInput.value === "") {
-           mistake = "emailInput";
-       }else if(nameInput.value === ""){
-            mistake = "nameInput";
-       }else if(passWord.value === ""){
-            mistake = "passWord";
-       }else if(confirmPass.value === ""){
-            mistake = "confirmPass";
-       }
-
-      throw "this fieled is required";
-    } catch(error){
-            show(error);
-    }
-}
-
-emailInput.addEventListener("blur" , validation);
-nameInput.addEventListener("blur" , validation);
-passWord.addEventListener("blur" , validation);
-confirmPass.addEventListener("blur" , validation);
-
-
-// new validation
-function validation(){
-    try{
-        if(emailInput.value != ""){
-            if(emailRegex.test(emailInput.value)){
-                emailError.innerText = "";
-            }else{
-                throw "this email is the wrong format";
-            }
-
-        }else{
-            checkEmpty();
-        }
-        if(nameInput.value != ""){
-            if(nameRegex.test(nameInput.value)){
-                nameError.innerText = "";
-            }else{
-                throw "the name should not have numbers";
-            }
-
-        }else{
-            checkEmpty();
-        }
-
-        if(passWord.value != ""){
-            if(passRegex.test(passWord.value)){
-                passError.innerText = "";
-            }else{
-                throw "the password needs to be fixed";
-            }
-
-        }else{
-            checkEmpty();
-        }
-        if(confirmPass.value != ""){
-            if(confirmPass.value === passWord.value){
-                passError.innerText = "";
-            }else{
-                throw "password dont match";
-            }
-
-        }else{
-            checkEmpty();
-        }
-
-
-    }catch(error){
-        show(error);
-    }
-    
-}
-
-
-// end of new validation
-
-
-
-
+email.addEventListener("blur", (e) => {
+	try {
+		if (e.target.value === "") throw "The email shouldn't be empty!";
+		if (e.target.value !== "") removeError(errors[0]);
+		if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value))
+			throw "You have entered an invalid email address!";
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value))
+			removeError(errors[0]);
+	} catch (error) {
+		errors[0].innerHTML = error;
+	}
+});
+nameuser.addEventListener("blur", (e) => {
+	try {
+		if (e.target.value === "") throw "The name shouldn't be empty!";
+		if (e.target.value !== "") removeError(errors[1]);
+		if (!/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/.test(e.target.value))
+			throw "You have entered an invalid name";
+		if (/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/.test(e.target.value))
+			removeError(errors[1]);
+	} catch (error) {
+		errors[1].innerHTML = error;
+	}
+});
+password.addEventListener("blur", (e) => {
+	try {
+		if (e.target.value === "") throw "The password shouldn't be empty!";
+		if (e.target.value !== "") removeError(errors[2]);
+		if (
+			!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*#?&])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,18}$/.test(
+				e.target.value
+			)
+		)
+			throw "A password contains at least 6 characters, one number, lower and uppercase letters and special characters";
+		if (
+			/^(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*#?&])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,18}$/.test(
+				e.target.value
+			)
+		)
+			removeError(errors[3]);
+	} catch (error) {
+		errors[3].innerHTML = error;
+	}
+});
+confirmPass.addEventListener("blur", (e) => {
+	try {
+		if (e.target.value === "") throw "The password shouldn't be empty!";
+		if (e.target.value !== "") removeError(errors[4]);
+		if (confirmPass.value != password.value) throw "password don't match";
+		if (confirmPass.value === password.value) removeError(errors[4]);
+	} catch (error) {
+		errors[4].innerHTML = error;
+	}
+});
 
 let avatar = document.querySelectorAll(".mini-avatar");
 let image;
-avatar.forEach(element => {
-    element.addEventListener("click", () =>{
-image=element.src;
-})
+avatar.forEach((element) => {
+	element.addEventListener("click", (e) => {
+		image = e.target.src;
+	});
 });
 
-signUp.addEventListener("click" , () =>{
-    localStorage.setItem("userAvatar", image);
-    
-    localStorage.setItem("email", emailInput.value);
-    localStorage.setItem("password", passWord.value);
-    localStorage.setItem("name", nameInput.value);
+signUp.addEventListener("click", () => {
+	email.value == ""
+		? (errors[0].innerHTML = "The email shouldn't be empty!")
+		: "";
+	nameuser.value == ""
+		? (errors[1].innerHTML = "The name shouldn't be empty!")
+		: "";
+	password.value == ""
+		? (errors[3].innerHTML = "The password shouldn't be empty!")
+		: "";
+	confirmPass.value == ""
+		? (errors[4].innerHTML = "The password shouldn't be empty!")
+		: "";
+	imageRadio.checked == false
+		? (errors[2].innerHTML = "please make sure to select an image")
+		: "";
+	console.log(imageRadio.checked);
+	if (
+		email.value != "" &&
+		nameuser.value != "" &&
+		password.value != "" &&
+		confirmPass.value != "" &&
+		image.value != "" &&
+		confirmPass.value == password.value
+	) {
+		localStorage.setItem("userAvatar", image);
+		localStorage.setItem("email", email.value);
+		localStorage.setItem("password", password.value);
+		localStorage.setItem("name", nameuser.value);
+		window.open("login.html", "_self");
+	}
 });
-
-
-
