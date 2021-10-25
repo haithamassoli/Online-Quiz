@@ -1,93 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/star.ico" type="image/x-icon" />
-    <title>Quiz App</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- FontAweome CDN Link for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- start Quiz button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
 
-    <!-- Info Box -->
-    <div class="info_box">
-      <div class="info-title"><span>Some Rules of this Quiz</span></div>
-      <div class="info-list">
-        <div class="info">
-          1. You will have only <span>15 seconds</span> per each question.
-        </div>
-        <div class="info">2. You can't return to past question.</div>
-        <div class="info">
-          3. You can't select any option once time goes off.
-        </div>
-        <div class="info">
-          4. You can't exit from the Quiz while you're playing.
-        </div>
-        <div class="info">
-          5. You'll get points on the basis of your correct answers.
-        </div>
-      </div>
-      <div class="buttons">
-        <button class="quit">Exit Quiz</button>
-        <button class="restart">Continue</button>
-      </div>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz app</title>
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Quiz Box -->
-    <div class="quiz_box">
-      <header>
-        <div class="title">HTML Quiz</div>
-        <div class="timer">
-          <div class="time_left_txt">Time Left</div>
-          <div class="timer_sec"></div>
-        </div>
-        <div class="time_line"></div>
-      </header>
-      <section>
-        <div class="que_text">
-          <!-- Here I've inserted question from JavaScript -->
-        </div>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        <form class="option_list">
-          <!-- <input type="radio" id="html" class="inputDel" />
-            <label class="option" for="html">HTML</label>   -->
-          <!-- Here I've inserted options from JavaScript -->
-        </form>
-      </section>
-
-      <!-- footer of Quiz Box -->
-      <footer>
-        <div class="total_que">
-          <!-- Here I've inserted Question Count Number from JavaScript -->
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.svg" alt="Turtles">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link quiz-link" aria-current="page" href="dashboard.html">Quizes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <a href="login.html" class="btn secondaryBtn me-2">Login</a>
+                <a href="signUp.html" class="btn primaryBtn">Sign Up</a>
+            </div>
         </div>
-        <button class="next_btn">Next Que</button>
-      </footer>
-    </div>
+    </nav>
+    <section class="home-page ">
+        <div class="container mt-5 ">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 hero">
+                    <div class="hero-title">
+                        Find The Best Quizes!
+                    </div>
+                    <div class="hero-des">
+                        Hey! would you link to grow up your skill and if you are interested to do just start here.
+                    </div>
+                    <a href="signUp.html" class="btn primaryBtn">Sign Up</a>
 
-    <!-- Result Box -->
-    <div class="result_box">
-      <div class="icon">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="complete_text">You've completed the Quiz!</div>
-      <div class="score_text">
-        <!-- Here I've inserted Score Result from JavaScript -->
-      </div>
-      <div class="result"></div>
-      <div class="que_text"></div>
-      <!-- <div class="buttons">
-        <button class="restart">Replay Quiz</button>
-        <button class="quit">Quit Quiz</button>
-      </div> -->
-    </div>
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="js/app.js"></script>
-  </body>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="home-img">
+                        <img src="img/hero-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div>
+    </section>
+    <!-- <footer>
+
+    <aside class="floaty-bar">
+        <div class="main-header box-shadow-header floaty">
+           <div class="container">
+              <div class=" d-flex align-items-center">
+                 <div class="col-md-4 center">
+                 <div class="logofot">
+                       <a class="afot active" href="https://sanademy.com">
+                       <img class="hedfot  active" src="https://sanademy.com/assets/images/logomobile.svg">  
+                       <span> Courses</span>
+                       </a>
+                    </div>
+                 </div>
+                 <div class="col-md-4 center">
+                 <a class="afot  " href="https://sanademy.com/dashboard/settings"> <i class="fal fa-user-circle d-block hedfot "></i>My Profile</a>
+                 </div>
+                 <div class="col-md-4 center">
+                 <a class="afot " href="https://sanademy.com/dashboard/enrolled-courses"> <i class="fal fa-play-circle d-block hedfot"></i>My Classes</a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </aside>
+</footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
 </html>

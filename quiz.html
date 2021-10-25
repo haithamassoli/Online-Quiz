@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/star.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/quiz.css" />
+    <title>Turtles</title>
+  </head>
+
+  <body>
+    <div class="info_box activeInfo">
+      <div class="info-title"><span>Some Rules of this Quiz</span></div>
+      <div class="info-list">
+        <div class="info">
+          1. You will have only <span>15 seconds</span> per each question.
+        </div>
+        <div class="info">
+          2. Once you select your answer, it can't be undone.
+        </div>
+        <div class="info">
+          3. You can't select any option once time goes off.
+        </div>
+        <div class="info">
+          4. You can't exit from the Quiz while you're playing.
+        </div>
+        <div class="info">
+          5. You'll get points on the basis of your correct answers.
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="quit"><a href="dashboard.html">Exit Quiz</a></button>
+        <button class="restart">Continue</button>
+      </div>
+    </div>
+    <div class="quiz-container">
+      <div class="quiz-info">
+        <div class="category">Category: <span class="quiz-name"></span></div>
+        <div class="counter">
+          Questions Counter:
+          <span class="questionsNum">5</span>
+        </div>
+      </div>
+      <div class="time_line"></div>
+      <div class="question"></div>
+      <div class="all-answers"></div>
+      <button class="submit-btn">Submit</button>
+      <div class="bullets">
+        <div class="spans"></div>
+        <div class="timer">
+          <div class="time_left_txt">Time Left</div>
+          <div class="timer_sec">15</div>
+        </div>
+      </div>
+    </div>
+    <div class="result_box">
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text">
+        <!-- Here I've inserted Score Result from JavaScript -->
+      </div>
+      <div class="buttons">
+        <button class="Show_Answer">Show Answer</button>
+        <button class="quit"><a href="dashboard.html">Quit</a></button>
+      </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>
