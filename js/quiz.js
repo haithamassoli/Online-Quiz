@@ -60,25 +60,23 @@ function loadQuestions(number) {
 loadQuestions(numOfQuestion);
 submit_Button.addEventListener("click", () => {
   checkRightAnswer(right_answer);
-  setTimeout(() => {
-    numOfQuestion++;
-    reset();
-    loadQuestions(numOfQuestion);
-    if (numOfQuestion > 4) {
-      ++number_of_all_user_quizzes;
-      loadResult();
-      container.classList.remove("active");
-      result_box.classList.add("activeResult");
-      calculation();
-      numOfQuestion = 0;
-      clearInterval(counter);
-      clearInterval(counterLine);
-    }
+  numOfQuestion++;
+  reset();
+  loadQuestions(numOfQuestion);
+  if (numOfQuestion > 4) {
+    ++number_of_all_user_quizzes;
+    loadResult();
+    container.classList.remove("active");
+    result_box.classList.add("activeResult");
+    calculation();
+    numOfQuestion = 0;
     clearInterval(counter);
     clearInterval(counterLine);
-    startTimer(15);
-    startTimerLine(15);
-  }, 700);
+  }
+  clearInterval(counter);
+  clearInterval(counterLine);
+  startTimer(15);
+  startTimerLine(15);
 });
 
 function createBullets(numOfQuestion) {
@@ -112,10 +110,8 @@ function loadResult() {
         h3.innerHTML = data[quiz_number][counterResult]["Question"];
         counterResult++;
         div.appendChild(h3);
-
         let divAnswers = document.createElement("div");
         divAnswers.classList.add("answers");
-
         for (let j = 0; j < data[quiz_number][i].options.length; j++) {
           let label = document.createElement("label");
           label.classList.add("resultLabel");
@@ -139,7 +135,6 @@ function addQuestion(arrayOfOptions, number_of_question) {
   const questionText = document.createElement("h2");
   questionText.textContent = number_of_question;
   question.appendChild(questionText);
-
   for (let i = 0; i <= 3; i++) {
     const answer = document.createElement("div");
     answer.classList.add("answer");
@@ -181,10 +176,10 @@ function checkRightAnswer(correct_answer) {
   } ${correct}/5`;
   if (correct >= 3) {
     score_text.style.color = "green";
-    result_img.src = "../img/good.jpg";
+    result_img.src = "./img/good.jpg";
   } else {
     score_text.style.color = "red";
-    result_img.src = "../img/bad.jpg";
+    result_img.src = "./img/bad.jpg";
   }
 }
 
