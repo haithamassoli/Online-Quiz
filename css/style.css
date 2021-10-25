@@ -216,7 +216,6 @@ footer {
 .checkbox:checked ~ .avatar {
 	border: 2px solid #89a382;
 }
-
 /* dashboard */
 .dashboard-header {
 	background: #eefef0;

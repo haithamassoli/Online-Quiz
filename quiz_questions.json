@@ -1,197 +1,273 @@
 {
-  "Quiz1": [
-    {
-      "name": "Solar System",
-      "Question": "How many planets are there in our solar system?",
-      "options": ["Eight", "Nine", "Ten", "Eleven"],
-      "right_answer": "Eight"
-    },
-    {
-      "Question": "Which statement describes the atmosphere of the planet correctly?",
-      "options": [
-        "Venus is mostly carbon dioxide",
-        "Mercury is mostly nitrogen",
-        "Earth is mostly oxygen",
-        "Saturn is mostly helium"
-      ],
-      "right_answer": "Venus is mostly carbon dioxide"
-    },
-    {
-      "Question": "To weigh roughly two-thirds less than what you do on Earth, which planet would you be on?",
-      "options": ["Uranus", "Mars", "Venus", "Jupiter"],
-      "right_answer": "Mars"
-    },
-    {
-      "Question": "How long does it take for light from the Sun to reach Earth?",
-      "options": ["1 minute", "8 minutes", "Instantaneous", "24 hours"],
-      "right_answer": "8 minutes"
-    },
-    {
-      "Question": " How old is the solar system?",
-      "options": [
-        "5000 years",
-        "5 million years",
-        "5 billion years",
-        "500 billion years"
-      ],
-      "right_answer": "5 billion years"
-    }
-  ],
-  "Quiz2": [
-    {
-      "name": "Front-end",
-      "Question": "What does HTML stand for?",
-      "right_answer": "Hyper Text Markup Language",
-      "options": [
-        "Hyper Text Preprocessor",
-        "Hyper Text Markup Language",
-        "Hyper Text Multiple Language",
-        "Hyper Tool Multi Language"
-      ]
-    },
-    {
-      "Question": "What does CSS stand for?",
-      "right_answer": "Cascading Style Sheet",
-      "options": [
-        "Common Style Sheet",
-        "Colorful Style Sheet",
-        "Computer Style Sheet",
-        "Cascading Style Sheet"
-      ]
-    },
-    {
-      "Question": "What does PHP stand for?",
-      "right_answer": "Hypertext Preprocessor",
-      "options": [
-        "Hypertext Preprocessor",
-        "Hypertext Programming",
-        "Hypertext Preprogramming",
-        "Hometext Preprocessor"
-      ]
-    },
-    {
-      "Question": "What does SQL stand for?",
-      "right_answer": "Structured Query Language",
-      "options": [
-        "Stylish Question Language",
-        "Stylesheet Query Language",
-        "Statement Question Language",
-        "Structured Query Language"
-      ]
-    },
-    {
-      "Question": "What does XML stand for?",
-      "right_answer": "eXtensible Markup Language",
-      "options": [
-        "eXtensible Markup Language",
-        "eXecutable Multiple Language",
-        "eXTra Multi-Program Language",
-        "eXamine Multiple Language"
-      ]
-    }
-  ],
-  "Quiz3": [
-    {
-      "name": "Geography",
-      "Question": " What is the study of weather called?",
-      "options": ["Meteorology", "Scientology", "nanoalogy", "computeralogy"],
-      "right_answer": "Meteorology"
-    },
-    {
-      "Question": " What is the main industry in the UK countryside?",
-      "options": [
-        "Transport industry",
-        "Computer industry",
-        "farming industry",
-        "Education industry"
-      ],
-      "right_answer": "farming industry"
-    },
-    {
-      "Question": "why we use p Element",
-      "options": [
-        "to make text bold",
-        "to make text italic",
-        "to use a paragraph",
-        "to make horizontal line"
-      ],
-      "right_answer": "to use a paragraph"
-    },
-    {
-      "Question": " What is the highest point in France?",
-      "options": ["Mount everest", "Mount Blanc", "Mount Jarash", "Mount Nipo"],
-      "right_answer": "Mount Blanc"
-    },
-    {
-      "Question": " When we have very little rain causing a water shortage what is this called?",
-      "options": ["Drought", "Deserting", "No watring", "Washing"],
-      "right_answer": "Drought"
-    }
-  ],
-  "Quiz4": [
-    {
-      "name": "Human Body",
-      "Question": "The human eye weighs approximately",
-      "options": ["34 grams", "4 grams", "28 grams", "None of the above"],
-      "right_answer": "28 grams"
-    },
-    {
-      "Question": "What is the only living tissue with in the human body that does not contain blood vessels?",
-      "options": ["The ear", "The finger nail", "Human hair", "The cornea"],
-      "right_answer": "The cornea"
-    },
-    {
-      "Question": "How many approximate miles of capillaries does the human body have?",
-      "options": ["37", "37,000", "21 million", "100"],
-      "right_answer": "37,000"
-    },
-    {
-      "Question": "How many pounds of oxygen does the adult human body require daily?",
-      "options": ["88 pounds", "14 pounds", "44 pounds", "34 pounds"],
-      "right_answer": "88 pounds"
-    },
-    {
-      "Question": "Your brain is...",
-      "options": ["7% Water", "89% Water", "25% Water", "80% Water"],
-      "right_answer": "80% Water"
-    }
-  ],
-  "Quiz5": [
-    {
-      "name": "Information about technology",
-      "Question": "In which decade was the American Institute of Electrical Engineers (AIEE) founded?",
-      "options": ["1850s", "1880s", "1930s", "1950s"],
-      "right_answer": "1880s"
-    },
-    {
-      "Question": "What is part of a database that holds only one type of information ? ",
-      "options": ["Report", "Field", "Record", "File"],
-      "right_answer": "Field"
-    },
-    {
-      "Question": "In which decade with the first transatlantic radio broadcast occur ? ",
-      "options": ["1850s", "1860s", "1870s", "1900s"],
-      "right_answer": "1900s"
-    },
-    {
-      "Question": "'OS'computer abbreviation usually means ? ",
-      "options": [
-        "Order of Significance",
-        "Open Software",
-        "Operating System",
-        "Optical Sensor"
-      ],
-      "right_answer": "88 pounds"
-    },
-    {
-      "Question": "'.MOV'extension refers usually to what kind of file ? ",
-      "options": [
-        "Image file",
-        "Animation/movie file",
-        "Audio file",
-        "MS Office document"
-      ],
-      "right_answer": "Animation/movie file"
-    }
-  ]
+    "Quiz1": [{
+            "Question": "How many planets are there in our solar system?",
+            "options": [
+                "Eight",
+                "Nine",
+                "Ten",
+                "Eleven"
+            ],
+            "right_answer": "Eight"
+        }, {
+            "Question": "Which statement describes the atmosphere of the planet correctly?",
+            "options": [
+                "Venus is mostly carbon dioxide",
+                "Mercury is mostly nitrogen",
+                "Earth is mostly oxygen",
+                "Saturn is mostly helium"
+            ],
+            "right_answer": "Venus is mostly carbon dioxide"
+        },
+        {
+            "Question": "To weigh roughly two-thirds less than what you do on Earth, which planet would you be on?",
+            "options": [
+                "Uranus",
+                "Mars",
+                "Venus",
+                "Jupiter",
+                "Mars"
+            ],
+            "right_answer": "Mars"
+        },
+        {
+            "Question": "How long does it take for light from the Sun to reach Earth?",
+            "options": [
+                "1 minute",
+                "8 minutes",
+                "Instantaneous",
+                "24 hours",
+                "8 minutes"
+            ],
+            "right_answer": "8 minutes"
+        }, {
+            "Question": " How old is the solar system?",
+            "options": [
+                "5000 years",
+                "5 million years",
+                "5 billion years",
+                "500 billion years",
+                "5 billion years"
+
+            ],
+            "right_answer": "5 billion years"
+        }
+    ],
+    "Quiz2": [{
+            "Question": "What does HTML stand for?",
+            "right_answer": "Hyper Text Markup Language",
+            "options": [
+                "Hyper Text Preprocessor",
+                "Hyper Text Markup Language",
+                "Hyper Text Multiple Language",
+                "Hyper Tool Multi Language"
+
+            ]
+
+        },
+        {
+
+            "Question": "What does CSS stand for?",
+            "right_answer": "Cascading Style Sheet",
+            "options": [
+                "Common Style Sheet",
+                "Colorful Style Sheet",
+                "Computer Style Sheet",
+                "Cascading Style Sheet"
+            ]
+        },
+        {
+
+            "Question": "What does PHP stand for?",
+            "right_answer": "Hypertext Preprocessor",
+            "options": [
+                "Hypertext Preprocessor",
+                "Hypertext Programming",
+                "Hypertext Preprogramming",
+                "Hometext Preprocessor"
+            ]
+        },
+        {
+
+            "Question": "What does SQL stand for?",
+            "right_answer": "Structured Query Language",
+            "options": [
+                "Stylish Question Language",
+                "Stylesheet Query Language",
+                "Statement Question Language",
+                "Structured Query Language"
+            ]
+        },
+        {
+
+            "Question": "What does XML stand for?",
+            "right_answer": "eXtensible Markup Language",
+            "options": [
+                "eXtensible Markup Language",
+                "eXecutable Multiple Language",
+                "eXTra Multi-Program Language",
+                "eXamine Multiple Language"
+            ]
+        }
+    ],
+    "Quiz3": [
+
+        {
+            "Question": " What is the study of weather called?",
+            "options": [
+                "Meteorology",
+                "Scientology",
+                "nanoalogy",
+                "computeralogy"
+            ],
+            "right_answer": "Meteorology"
+
+        },
+        {
+            "Question": " What is the main industry in the UK countryside?",
+            "options": [
+                "Transport industry",
+                "Computer industry",
+                "farming industry",
+                "Education industry"
+            ],
+            "right_answer": "farming industry"
+
+        },
+        {
+            "Question": "why we use p Element",
+            "options": [
+                "to make text bold",
+                "to make text italic",
+                "to use a paragraph",
+                "to make horizontal line"
+            ],
+            "right_answer": "to use a paragraph"
+
+        },
+        {
+            "Question": " What is the highest point in France?",
+            "options": [
+                "Mount everest",
+                "Mount Blanc",
+                "Mount Jarash",
+                "Mount Nipo"
+            ],
+            "right_answer": "Mount Blanc"
+
+        },
+        {
+            "Question": " When we have very little rain causing a water shortage what is this called?",
+            "options": [
+                "Drought",
+                "Deserting",
+                "No watring",
+                "Washing"
+            ],
+            "right_answer": "Drought"
+        }
+    ],
+    "Quiz4": [{
+            "Question": "The human eye weighs approximately",
+            "options": [
+                "34 grams",
+                "4 grams",
+                "28 grams",
+                "None of the above"
+            ],
+            "right_answer": "28 grams"
+        },
+        {
+            "Question": "What is the only living tissue with in the human body that does not contain blood vessels?",
+            "options": [
+                "The ear",
+                "The finger nail",
+                "Human hair",
+                "The cornea"
+            ],
+            "right_answer": "The cornea"
+        },
+        {
+            "Question": "How many approximate miles of capillaries does the human body have?",
+            "options": [
+                "37",
+                "37,000",
+                "21 million",
+                "100"
+            ],
+            "right_answer": "37,000"
+        },
+        {
+            "Question": "How many pounds of oxygen does the adult human body require daily?",
+            "options": [
+                "88 pounds",
+                "14 pounds",
+                "44 pounds",
+                "34 pounds"
+            ],
+            "right_answer": "88 pounds"
+        },
+        {
+            "Question": "Your brain is...",
+            "options": [
+                "7% Water",
+                "89% Water",
+                "25% Water",
+                "80% Water"
+
+            ],
+            "right_answer": "80% Water"
+        }
+    ],
+    "Quiz5": [{
+            "Question": "In which decade was the American Institute of Electrical Engineers (AIEE) founded?",
+            "options": [
+                "1850s",
+                "1880s",
+                "1930s",
+                "1950s"
+            ],
+            "right_answer": "1880s"
+        },
+        {
+            "Question": "What is part of a database that holds only one type of information ? ",
+            "options": [
+                "Report",
+                "Field",
+                "Record",
+                "File"
+            ],
+            "right_answer": "Field"
+        },
+        {
+            "Question": "In which decade with the first transatlantic radio broadcast occur ? ",
+            "options": [
+                "1850s",
+                "1860s",
+                "1870s",
+                "1900s"
+            ],
+            "right_answer": "1900s"
+        },
+        {
+            "Question": "'OS'computer abbreviation usually means ? ",
+            "options": [
+                "Order of Significance",
+                "Open Software",
+                "Operating System",
+                "Optical Sensor"
+            ],
+            "right_answer": "88 pounds"
+        },
+        {
+            "Question": "'.MOV'extension refers usually to what kind of file ? ",
+            "options": [
+                "Image file",
+                "Animation/movie file",
+                "Audio file",
+                "MS Office document"
+
+            ],
+            "right_answer": "Animation/movie file"
+        }
+    ]
 }

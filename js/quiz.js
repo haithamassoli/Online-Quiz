@@ -15,7 +15,6 @@ const score_text = document.querySelector(".score_text");
 const result = document.querySelector(".result");
 const time_line = document.querySelector(".time_line");
 const result_img = document.querySelector(".result_img");
-const total = document.querySelector(".total");
 
 let largeDiv = document.createElement("div");
 let userAnswer;
@@ -51,7 +50,6 @@ function loadQuestions(number) {
       .then((response) => response.json())
       .then((data) => {
         quizName.innerHTML = data[quiz_number][0].name;
-
         options = data[quiz_number][number].options;
         addQuestion(options, data[quiz_number][number].Question);
         createBullets(number);
@@ -102,9 +100,6 @@ function loadResult() {
       clearInterval(counter);
       clearInterval(counterLine);
       result.innerHTML = "";
-      total.innerHTML = `correct answers:${correct}       wrong answer:${
-        5 - correct
-      }`;
       let counterResult = 0;
       container.insertAdjacentHTML("beforeend", quizName);
       for (let i = 0; i < data[quiz_number].length; i++) {
@@ -174,8 +169,13 @@ function checkRightAnswer(correct_answer) {
       right_answers.push(correct_answer);
       user_answers.push(userAnswer);
       storeResult();
+      if (userAnswer !== correct_answer) {
+      } else {
+        correct++;
+      }
     }
   });
+
   score_text.innerHTML = `${
     correct >= 3 ? "perfect" : "Hard luck"
   } ${correct}/5`;
