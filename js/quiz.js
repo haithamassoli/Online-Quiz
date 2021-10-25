@@ -45,7 +45,7 @@ Show_Answer.addEventListener("click", () => {
 function loadQuestions(number) {
   if (number < 5) {
     fetch(
-      "https://raw.githubusercontent.com/SaharZahran/Online_Quiz_Website/main/quiz_questions.json"
+      "https://raw.githubusercontent.com/haithamassoli/Online-Quiz/main/quiz_questions.json"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -91,7 +91,7 @@ function createBullets(numOfQuestion) {
 
 function loadResult() {
   fetch(
-    "https://raw.githubusercontent.com/SaharZahran/Online_Quiz_Website/main/quiz_questions.json"
+    "https://raw.githubusercontent.com/haithamassoli/Online-Quiz/main/quiz_questions.json"
   )
     .then((response) => response.json())
     .then((data) => {
