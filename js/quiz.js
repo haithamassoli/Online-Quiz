@@ -23,12 +23,10 @@ let right_answer;
 let correct = 0;
 let user_answers = [];
 let right_answers = [];
+let labelAns = [];
 let options;
 let quiz_number = JSON.parse(localStorage.getItem("quiz_number"));
 const questionsNum = document.querySelector(".questionsNum");
-let number_of_passed_quizzes = 0;
-let average_point = 0;
-let number_of_all_user_quizzes = 0;
 
 continue_btn.addEventListener("click", () => {
   info_box.classList.remove("activeInfo");
@@ -58,17 +56,16 @@ function loadQuestions(number) {
   }
 }
 loadQuestions(numOfQuestion);
+
 submit_Button.addEventListener("click", () => {
   checkRightAnswer(right_answer);
   numOfQuestion++;
   reset();
   loadQuestions(numOfQuestion);
   if (numOfQuestion > 4) {
-    ++number_of_all_user_quizzes;
     loadResult();
     container.classList.remove("active");
     result_box.classList.add("activeResult");
-    calculation();
     numOfQuestion = 0;
     clearInterval(counter);
     clearInterval(counterLine);
@@ -99,7 +96,6 @@ function loadResult() {
       clearInterval(counterLine);
       result.innerHTML = "";
       let counterResult = 0;
-      container.insertAdjacentHTML("beforeend", quizName);
       for (let i = 0; i < data[quiz_number].length; i++) {
         result.appendChild(largeDiv);
         largeDiv.classList.add("largeDiv");
@@ -117,13 +113,21 @@ function loadResult() {
           label.classList.add("resultLabel");
           label.innerHTML = data[quiz_number][i].options[j];
           divAnswers.append(label);
-          let resultArr = localStorage.getItem("user-answers").split(",");
+          labelAns.push(label);
+          labelAns.forEach((e) => {
+            if (
+              e.innerHTML !=
+                JSON.parse(localStorage.getItem("right-answers"))[i] &&
+              e.innerHTML == user_answers[i]
+            ) {
+              e.classList.add("incorrect");
+            }
+          });
+          JSON.parse(localStorage.getItem("user-answers"));
           if (
             data[quiz_number][i].options[j] == data[quiz_number][i].right_answer
           ) {
             label.classList.add("correct");
-          } else {
-            label.classList.add("incorrect");
           }
         }
         div.appendChild(divAnswers);
@@ -151,9 +155,6 @@ function addQuestion(arrayOfOptions, number_of_question) {
     allAnswers.appendChild(answer);
   }
 }
-
-let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
-let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 function checkRightAnswer(correct_answer) {
   const inputAnswers = document.querySelectorAll("input");
@@ -192,8 +193,8 @@ function reset() {
 }
 
 function storeResult() {
-  localStorage.setItem("user-answers", user_answers);
-  localStorage.setItem("right-answers", right_answers);
+  localStorage.setItem("user-answers", JSON.stringify(user_answers));
+  localStorage.setItem("right-answers", JSON.stringify(right_answers));
 }
 
 function startTimer(time) {
