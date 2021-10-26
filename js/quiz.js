@@ -15,6 +15,7 @@ const score_text = document.querySelector(".score_text");
 const result = document.querySelector(".result");
 const time_line = document.querySelector(".time_line");
 const result_img = document.querySelector(".result_img");
+const footer = document.querySelector("footer");
 
 let largeDiv = document.createElement("div");
 let userAnswer;
@@ -38,6 +39,7 @@ continue_btn.addEventListener("click", () => {
 Show_Answer.addEventListener("click", () => {
   result_box.classList.remove("activeResult");
   container.classList.add("active");
+  footer.classList.remove("active");
 });
 
 function loadQuestions(number) {
@@ -123,7 +125,6 @@ function loadResult() {
               e.classList.add("incorrect");
             }
           });
-          JSON.parse(localStorage.getItem("user-answers"));
           if (
             data[quiz_number][i].options[j] == data[quiz_number][i].right_answer
           ) {
@@ -225,7 +226,7 @@ function startTimerLine(time) {
   function timer() {
     time += 1; //upgrading time value with 1
     time_line.style.width = time * 0.1821 + "%"; //increasing width of time_line with px by time value
-    if (time > 549) {
+    if (time > 100 + "%") {
       //if time value is greater than 549
       clearInterval(counterLine); //clear counterLine
     }
