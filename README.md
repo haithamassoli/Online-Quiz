@@ -26,6 +26,7 @@ A website for Online Quizzes.
 An updated version of any Browser connected to an internet connection only needs to open this project.
 
 ## Wireframe
+https://miro.com/app/board/o9J_lnIr0VQ=/
 
 ## Mockup
 
