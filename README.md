@@ -3,13 +3,6 @@
 ## Synopsis
 A website for Online Quizzes.
 
-## Contributors
-1. Ahmad Marwan Kilani.
-2. Haitham Assoli.
-3. Mohammad abualhaj (Project Owner).
-4. Sarah Hasan.
-5. Sahar Zahran (Scrum Master).
-
 ## Technologies
 1. HTML5.
 2. CSS3.
